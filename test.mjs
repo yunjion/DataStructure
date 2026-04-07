@@ -1,2 +1,4 @@
-let str = "헬로우 월드";
-console.log(str);
+import { Node } from "./LinkedList.mjs";
+let node1 = new Node(1);
+let node2 = new Node(2);
+let node3 = new Node(3);
