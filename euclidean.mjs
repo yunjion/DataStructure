@@ -7,5 +7,3 @@ function euclidean(num1,num2) {
    return num1;
 }
 console.log(euclidean(1024,24));
-    
-   
