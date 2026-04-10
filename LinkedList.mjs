@@ -1,5 +1,6 @@
 class Node {
     constructor(data,next = null) {
+        this.data = data;
         this.next = next;
     }
 }
@@ -8,13 +9,33 @@ class LikedList {
     constructor() {
         this.head = null;
         this.count = 0;
-
-
     }
-insertAt(index,data) {
-    if(index < 0 || index > this.data) {
-            throw new error ("범위를 벗어났습니다");
+
+    //printAll
+    printAll() {
+        let currentNode = this.head;
+        let text = "[";
+        while(currentNode != null) {
+            //console.log(currentNode.data);
+            text += currentNode.data;
+            currentNode = currentNode.next;
+            if(currentNode != null) text += "[";
         }
+        text += "]";
+        console.log(text);
+    }
+
+    //clear
+    clear() {
+        this.head = null;
+        this.count = 0;
+    }
+
+
+insertAt(index,data) {
+   if(index < 0 || index > this.count) {
+    throw new Error("범위를 벗어났습니다");
+}
 
         let newNode = new Node(data);
         if(index === 0) {
