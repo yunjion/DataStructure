@@ -41,21 +41,6 @@ list.printAll();
 list.deleteLast(3);
 list.printAll();
 
-// console.log("==== removeAt() 호출 ====");
-// list.removeAt(1);
-// list.printAll();
+console.log("");
 
-// console.log("");
-
-// console.log("==== find() 호출 ====");
-// console.log(list.find(30));
-
-// console.log("");
-
-// console.log("==== get() 호출 ====");
-// console.log(list.get(1));
-
-// console.log("");
-
-// console.log("==== size() 호출 ====");
-// console.log(list.size());
+console.log("==== get() 호출 ====");
