@@ -5,14 +5,13 @@ class Stack {
         this.list = new LikedList();
     }
 
-    push(data) { //데이터 참조
-        this.list.insertAt(0,data);
-
+    push(data) {
+        this.list.insertAt(0, data);
     }
 
-    pop() { //데이터 제거
+    pop() {
         try {
-          this.list.deleteAt(0);
+            return this.list.deleteAt(0); // ✅ return 필수
         } catch(e) {
             return null;
         }
@@ -23,9 +22,8 @@ class Stack {
     }
 
     isEmpty() {
-        return (this.count === 0);
+        return (this.list.count === 0); // ✅ this.list.count
     }
+}
 
-} //Stack
-
-export{Stack};
+export { Stack }; // ✅ 반드시 파일 맨 아래에 있어야 함
