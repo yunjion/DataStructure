@@ -1,16 +1,24 @@
-let stack = [];
+import {Stack} from "./Stack.mjs";
+// let stack = [];
+// stack.push(1);
+// stack.push(2);
+// stack.push(3);
+// stack.push(4);
+// stack.push(5);
+// console.log(stack);
+
+// stack.pop();
+// console.log(stack);
+// stack.pop();
+// console.log(stack);
+
+// let node = stack.pop();
+// console.log(node);
+// console.log(stack);
+
+let stack = new Stack();
+console.log(" ==== 첫번째 출력 ====");
 stack.push(1);
 stack.push(2);
 stack.push(3);
 stack.push(4);
-stack.push(5);
-console.log(stack);
-
-stack.pop();
-console.log(stack);
-stack.pop();
-console.log(stack);
-
-let node = stack.pop();
-console.log(node);
-console.log(stack);
