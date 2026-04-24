@@ -13,7 +13,7 @@ import {Stack} from "./Stack.mjs";
 // console.log(stack);
 
 // let node = stack.pop();
-// console.log(node);
+// console.log(node);   
 // console.log(stack);
 
 let stack = new Stack();
@@ -24,4 +24,12 @@ stack.push(3);
 stack.push(4);
 
 console.log(stack.pop().data);
+
+console.log(" ==== 두번째 출력 ====");
+stack.push("일");
+stack.push("이");
+stack.push("삼");
+stack.push("사");
+
+
 
