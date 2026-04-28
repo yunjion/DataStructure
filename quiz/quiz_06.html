@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>
+    후위연산식(postfix)구하기 
+    </title>
+</head>
+<body>
+    
+    <script>
+        function solution(s) {
+            let stack = [];
+            
+            for(let x of s) {
+                if(!isNaN(x)) {
+                    stack.push(Number(x));
+                }
+                else {
+                    let b = stack.pop();
+                    let a = stack.pop();
+                    if(x === "+") stack.push(a + b);
+                    else if(x === "-") stack.push(a - b);
+                    else if(x === "*") stack.push(a * b);
+                    else if(x === "/") stack.push(a / b);
+                }
+            }
+            return stack[0];
+        }
+        let str = "352+*9-";
+        console.log(solution(str));
+    </script>
+</body>
+</html>
