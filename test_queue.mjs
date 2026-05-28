@@ -7,3 +7,12 @@ queue.enque(2);
 queue.enque(3);
 queue.enque(4);
 console.log(queue);
+console.log(queue.front());
+
+console.log("==== enque() 네 번 호출 ====");
+console.log(queue.dequeue().data);
+console.log(queue.dequeue().data);
+console.log(queue.dequeue().data);
+console.log(queue.dequeue().data);
+
+console.log(`isEmpty : ${queue.isEmpty()}`);
