@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>
+        큐 - 미림왕국의 공주 구하러 가는 왕자 
+    </title>
+</head>
+<body>
+    
+    <script>
+        function solution(n,k) {
+            let answer;
+
+            let queue = Array.from({length:n},(v,i) => i + 1);
+
+            while(queue.length) {
+                for(let i = 1; i < k; i++) queue.push(queue.shift());
+                queue.shift();
+                if(queue.length === 1) answer = queue.shift();
+            }
+           // let queue = [];
+            // for(let i = 0; i < n; i++) {
+            //     queue.push(i+1);
+            // }
+            // queue.push(queue.shift());
+            // console.log(queue);
+            
+            return answer;
+
+        }
+        console.log(solution(8,3));
+    </script>
+</body>
+</html>
