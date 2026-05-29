@@ -1,0 +1,20 @@
+<script>
+    function solution(a, b) {
+        let answer = "YES";
+
+        let queue = a.split("");
+
+        for(let x of b) {
+            if(queue.includes(x)) {
+                if(x !== queue.shift()) return "No";
+            }
+        }
+        if(queue.length >0) return "No";
+        return answer;
+    }
+
+    let a = "CBA";
+    let b = "CBCAGE";
+
+    console.log(solution(a, b));
+</script>
